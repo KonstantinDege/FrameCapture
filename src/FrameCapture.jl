@@ -44,7 +44,7 @@ function find_window(title::String)::Ptr{Cvoid}
     return hw
 end
 
-# --- Public API ---
+
 
 # Dictionary to keep track of contexts by window title
 const _contexts = Dict{String, CaptureContextPtr}()
@@ -134,6 +134,8 @@ function get_img(window_title::String)
         return nothing
     end
 end
+
+# --- Public API ---
 export start_capture, stop_capture, capture_frame, get_img
 
 end # module
